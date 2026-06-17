@@ -23,7 +23,7 @@ public:
 
         for(auto &[key,val]: mp){
 
-            if(val>0){
+            while(val>0){
                 for(int i=0; i< groupSize; i++){
                     if( mp[key+i]==0){
                         return false;
