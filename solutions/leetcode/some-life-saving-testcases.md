@@ -25,9 +25,11 @@ public:
 
             if(val>0){
                 for(int i=0; i< groupSize; i++){
-                    if(val+i==0){
+                    if( mp[key+i]==0){
                         return false;
                     }
+
+                    mp[key+i]--;
                 }
             }
         }
