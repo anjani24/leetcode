@@ -1,7 +1,7 @@
 # set matrix zeroes/description
 
 **Platform:** LeetCode  
-**Date:** 2026-06-21  
+**Date:** 2026-06-22  
 
 ## Solution
 
