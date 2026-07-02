@@ -15,7 +15,7 @@ public:
         for(int i=0; i< nums.size(); i++){
             mp[nums[i]]++;
         }
-        int a=0;
+
         for( auto a: mp){
             if(a.second> n/2){
                 return a.first;
