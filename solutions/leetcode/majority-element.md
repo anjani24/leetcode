@@ -1,7 +1,7 @@
 # majority element
 
 **Platform:** LeetCode  
-**Date:** 2026-07-02  
+**Date:** 2026-07-06  
 
 ## Solution
 
@@ -9,74 +9,21 @@
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
-        unordered_map<int, int> mp;
-        int n= nums.size();
-        
-        for(int i=0; i< nums.size(); i++){
-            mp[nums[i]]++;
-        }
-
-        for( auto a: mp){
-            if(a.second> n/2){
-                return a.first;
+        int ans=0;
+        int count=0;
+        int n=nums.size();
+        for(int i=0;i<n;i++)
+        {
+            if(ans==nums[i])count++;
+            else if(count==0){
+                ans= nums[i];
+                count++;
             }
-        }
-        return -1;  
+            else if (ans!=nums[i]){
+                count--;
+            }
+        } 
+        return ans;
     }
 };
-
-
-/*
-
-
-
-hlo
-idhr hi likh lo
-
-okok
-nai maarugi
-kaise krte ye???????????????
-
-yesss okiiii
- 
- oki but O(1) space oki
- 
-
-//map 
-//okay itne enter mat maar neeche chla jaata
-//q hi nhi padha itne tu soch humpe time nahi jldiiiiiiii sppeeeedddd
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-*/
-// what are you doing dont make enters for space vo to hota rhega
 ```
