@@ -1,7 +1,7 @@
 # concatenate non zero digits and multiply by sum ii/description
 
 **Platform:** LeetCode  
-**Date:** 2026-07-08  
+**Date:** 2026-07-09  
 
 ## Solution
 
