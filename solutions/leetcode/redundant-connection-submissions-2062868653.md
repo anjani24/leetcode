@@ -1,0 +1,44 @@
+# redundant connection/submissions/2062868653
+
+**Platform:** LeetCode  
+**Date:** 2026-07-10  
+
+## Solution
+
+```
+class Solution {
+public:
+    int findParent(int node, vector<int>& parent){
+        if(node== parent[node]){
+            return node;
+        }
+        return parent[node]=findParent(parent[node], parent);
+
+    }
+    vector<int> findRedundantConnection(vector<vector<int>>& edges) {
+        int n= edges.size();
+        vector<int>parent(n+1);
+
+        for(int i=0; i<n; i++){
+            parent[i]=i;
+        }
+
+        for(auto& edge :edges){
+            int u= edge[0];
+            int v= edge[1];
+            
+            int rootU= findParent(u, parent);
+            int rootV= findParent(v, parent);
+
+            if(rootU==rootV){
+                return edge;
+            }
+
+            parent[rootU]=rootV;
+        }
+
+        return {};
+
+    }
+};
+```
