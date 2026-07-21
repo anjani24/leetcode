@@ -1,7 +1,7 @@
 # baseball game/description
 
 **Platform:** LeetCode  
-**Date:** 2026-07-20  
+**Date:** 2026-07-21  
 
 ## Solution
 
