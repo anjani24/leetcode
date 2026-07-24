@@ -1,7 +1,7 @@
 # maximize active section with trade ii/description
 
 **Platform:** LeetCode  
-**Date:** 2026-07-23  
+**Date:** 2026-07-24  
 
 ## Solution
 
