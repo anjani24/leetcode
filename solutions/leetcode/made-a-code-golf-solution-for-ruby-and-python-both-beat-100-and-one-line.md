@@ -14,16 +14,18 @@ public:
         if(n==0){
             return 0;
         }
+        int maxp=0;
+        int q=n;
 
-        while(n!=0){
-            int k= n%10;
-            if(k!=0){
-                prod= prod * k;
-            }
-            n=n/10;
+        while(q!=0){
+            int a= q%10;
+            q= q/10;
+            int k= q%10;
+            prod= k*a;
+            maxp= max(prod, maxp);
 
         }
-        return prod;
+        return maxp;
         
     }
 };
