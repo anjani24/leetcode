@@ -19,10 +19,16 @@ public:
 
         while(q!=0){
             int a= q%10;
-            q= q/10;
-            int k= q%10;
-            prod= k*a;
-            maxp= max(prod, maxp);
+            int k= q/10;
+            while(k!=0){
+                int b= k%10;
+                prod= a*b;
+                maxp= max(prod, maxp);
+                k=k/10;
+            }
+
+            q=q/10;
+
 
         }
         return maxp;
