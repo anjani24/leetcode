@@ -1,7 +1,7 @@
 # baseball game/submissions/2079334488
 
 **Platform:** LeetCode  
-**Date:** 2026-07-25  
+**Date:** 2026-07-26  
 
 ## Solution
 
