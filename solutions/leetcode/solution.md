@@ -6,13 +6,12 @@
 ## Solution
 
 ```
-# Write your MySQL query statement below
-SELECT DISTINCT v.customer_id, COUNT(v.customer_id) as count_no_trans
-FROM Visits v
-LEFT JOIN Transactions t
-ON v.visit_id= t.visit_id
-WHERE t.transaction_id IS NULL
-GROUP BY v.customer_id
-
+SELECT contest_id, ROUND(COUNT(contest_id)*100/(
+    SELECT COUNT(user_id)
+    FROM Users
+),2) AS percentage
+FROM Register
+GROUP BY contest_id
+ORDER BY percentage DESC, contest_id ASC;
 
 ```
