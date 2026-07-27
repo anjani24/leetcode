@@ -7,7 +7,7 @@
 
 ```
 # Write your MySQL query statement below
-SELECT project_id, AVG(experience_years) AS average_years
+SELECT project_id, ROUND(AVG(experience_years),2) AS average_years
 FROM Project p
 LEFT JOIN Employee e
 On p.employee_id= e.employee_id
