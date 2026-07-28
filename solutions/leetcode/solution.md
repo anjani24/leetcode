@@ -1,7 +1,7 @@
 # Solution
 
 **Platform:** LeetCode  
-**Date:** 2026-07-27  
+**Date:** 2026-07-28  
 
 ## Solution
 
