@@ -7,7 +7,7 @@
 
 ```
 # Write your MySQL query statement below
-SELECT l1.num AS ConsecutiveNums
+SELECT DISTINCT l1.num AS ConsecutiveNums
 from Logs l1
 join Logs l2
 join Logs l3
