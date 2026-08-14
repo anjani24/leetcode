@@ -1,17 +1,14 @@
 # Write your MySQL query statement below
 
 **Platform:** LeetCode  
-**Date:** 2026-07-29  
+**Date:** 2026-08-14  
 
 ## Solution
 
 ```
 # Write your MySQL query statement below
-SELECT class
-FROM Courses
-GROUP BY class
-Having count(student)>=5
-
-
-
+select sell_date, count(distinct product)as num_sold, group_concat(distinct product order by product asc separator ',')as products
+from Activities
+group by sell_date
+order by sell_date asc
 ```
