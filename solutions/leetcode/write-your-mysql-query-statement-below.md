@@ -1,16 +1,17 @@
 # Write your MySQL query statement below
 
 **Platform:** LeetCode  
-**Date:** 2026-08-14  
+**Date:** 2026-08-15  
 
 ## Solution
 
 ```
 # Write your MySQL query statement below
-# Write your MySQL query statement below
-SELECT user_id, 
-       CONCAT(UPPER(SUBSTR(name, 1, 1)), LOWER(SUBSTR(name, 2))) AS name
-FROM Users
-ORDER BY user_id;
+select c.name as Customers
+from Customers c
+left join Orders o
+on c.id=o.customerId
+where o.customerId is null
+
 
 ```
