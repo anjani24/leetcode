@@ -1,7 +1,7 @@
 # longest substring without repeating characters/description
 
 **Platform:** LeetCode  
-**Date:** 2026-08-19  
+**Date:** 2026-08-30  
 
 ## Solution
 
