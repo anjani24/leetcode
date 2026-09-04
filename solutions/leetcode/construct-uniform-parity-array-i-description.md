@@ -1,7 +1,7 @@
 # construct uniform parity array i/description
 
 **Platform:** LeetCode  
-**Date:** 2026-09-03  
+**Date:** 2026-09-04  
 
 ## Solution
 
