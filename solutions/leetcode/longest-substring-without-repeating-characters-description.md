@@ -1,7 +1,7 @@
 # longest substring without repeating characters/description
 
 **Platform:** LeetCode  
-**Date:** 2026-08-30  
+**Date:** 2026-09-05  
 
 ## Solution
 
@@ -24,26 +24,25 @@ public:
         // return maxl;
 
 
-        unordered_map<char, int> st;
+        unordered_set<int> st;
+        int n= s.size();
         int l=0;
         int maxl=0;
+        int r=0;
 
-        for(int r=0; r<s.size();r++){
+        while(r<n && l<=r){
+
             if(st.find(s[r])!=st.end()){
-                l=max(l,st[s[r]]+1);
+                st.erase(s[l]);
+                l++;
             }
-            st[s[r]]=r;
-            maxl= max(maxl, r-l+1);
-
+            else{
+                st.insert(s[r]);
+                maxl= max(maxl, r-l+1);
+                r++;
+            }
         }
-
-        return maxl;
-
-
-
-
-
-        
+        return maxl;  
     }
 };
 ```
