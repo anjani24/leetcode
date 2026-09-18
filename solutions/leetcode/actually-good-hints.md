@@ -25,15 +25,14 @@ public:
         vector<bool> dp(sum+1,false);
         dp[0]=true;
 
-        for(int i=1; i<=sum; i++){
-
-            for(int num:nums){
+        for(int num:nums){
+            for(int i=sum; i>=num;i--){
                 if(num<=i){
                     dp[i]=dp[i-num] || dp[i];
                 }
             }
         }
-        return dp[n-1];
+        return dp[sum];
         
     }
 };
