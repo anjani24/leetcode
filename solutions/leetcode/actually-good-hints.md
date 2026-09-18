@@ -1,42 +1,39 @@
 # 😇 Actually Good Hints
 
 **Platform:** LeetCode  
-**Date:** 2026-06-17  
+**Date:** 2026-09-18  
 
 ## Solution
 
 ```
 class Solution {
 public:
-    vector<int> partitionLabels(string s) {
+    bool canPartition(vector<int>& nums) {
 
-        vector<int> ans;
-        map<char, int> mp;
+        int n=nums.size();
+        sort(nums.begin(), nums.end());
+        int sum=0;
 
-
-        for(int i=0; i< s.size(); i++){
-            mp[s[i]]=i;
+        for(int i=0; i<n;i++){
+            sum+=nums[i];
         }
 
-        int j=0;
+        if (sum%2==1)return false;
 
-        while(j<s.size()){
-            int r= mp[s[j]];
-            int count=0;
+        sum= sum/2;
 
-            for(int k=j; k<r; k++){
-                count++;
+        vector<bool> dp(sum+1,false);
+        dp[0]=true;
 
-                // r= max(r, mp[s[k]]);
-                if (mp[s[k]]> r){
-                    r=mp[s[k]];
+        for(int i=1; i<=sum; i++){
+
+            for(int num:nums){
+                if(num<=i){
+                    dp[i]=dp[i-num] || dp[i];
                 }
             }
-
-            ans.push_back(count+1);
-            j= r+1;
         }
-        return ans;
+        return dp[n];
         
     }
 };
