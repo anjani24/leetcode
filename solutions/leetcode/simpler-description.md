@@ -16,13 +16,12 @@ public:
         int ans=0;
         for(auto a : mp){  
             if(a.second>a.first){
-                int n=(a.second)/(a.first+1);
-                ans += n*(a.first+1);  
+                int n=(a.first+a.second)/(a.first+1);
+                ans += n*(a.first+1);
             }
             else{
                 ans+= a.first+1;
             }
-            
         }
         return ans;
     }
