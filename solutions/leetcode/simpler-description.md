@@ -8,22 +8,16 @@
 ```
 class Solution {
 public:
-    int numRabbits(vector<int>& answers) {
+    int numRabbits(vector<int>& a) {
         unordered_map<int,int> mp;
-        for(int i=0;i<answers.size();i++){
-            mp[answers[i]]++;
-        }
         int ans=0;
-        for(auto a : mp){  
-            if(a.second>a.first){
-                int n=(a.first+a.second)/(a.first+1);
-                ans += n*(a.first+1);
-            }
-            else{
-                ans+= a.first+1;
-            }
+        for(int i=0;i<a.size();i++){
+            int sz=a[i]+1;
+            if(mp[a[i]]%sz==0)ans+=sz;
+            mp[a[i]]++;
         }
         return ans;
     }
 };
+
 ```
