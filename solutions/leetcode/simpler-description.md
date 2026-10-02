@@ -9,22 +9,25 @@
 class Solution {
 public:
     int numRabbits(vector<int>& answers) {
-        unordered_set<int>st;
-        for(int i:answers)
-        {
-            st.insert(i+1);
+        
+        unordered_map<int,int> mp;
+        
+        for(int i=0;i<answers.size();i++){
+            mp[answers[i]]++;
         }
         int ans=0;
-        for(int i:st)
-        {
-            ans+=i;
+        
+        for(auto a : mp){
+            if(a.second>a.first){
+                int n=(a.first+1)/a.second;
+                ans += n*(a.first+1);  
+            }
+            else{
+                ans+= a.first+1;
+            }
+            
         }
-        return ans;
+        return ans; 
     }
 };
-
-
-
-
-//
 ```
