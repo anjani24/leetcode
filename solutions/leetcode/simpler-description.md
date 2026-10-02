@@ -9,17 +9,14 @@
 class Solution {
 public:
     int numRabbits(vector<int>& answers) {
-        
         unordered_map<int,int> mp;
-        
         for(int i=0;i<answers.size();i++){
             mp[answers[i]]++;
         }
         int ans=0;
-        
-        for(auto a : mp){
+        for(auto a : mp){  
             if(a.second>a.first){
-                int n=(a.first+1)/a.second;
+                int n=(a.second)/(a.first+1);
                 ans += n*(a.first+1);  
             }
             else{
@@ -27,7 +24,7 @@ public:
             }
             
         }
-        return ans; 
+        return ans;
     }
 };
 ```
