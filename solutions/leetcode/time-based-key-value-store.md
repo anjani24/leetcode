@@ -37,11 +37,10 @@ public:
             }
         }
         return ans;
-        
-        
     }
 };
-
+//start with uske nneeche ummmmmmmmmmmmmmm one sec
+//shit tle aagyi //mtlb
 /**
  * Your TimeMap object will be instantiated and called as such:
  * TimeMap* obj = new TimeMap();
@@ -49,47 +48,4 @@ public:
  * string param_2 = obj->get(key,timestamp);
  */
 
- 
- //tatvam space
-// unordered_map<string,<pair<int,string>>>
-// int n=mp.second.size()
-// int l=0,h=n-1;
-// int mid=l+(h-l)/2
-// if(mid)
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- //anjanis space
- 
-// set- foo-1 , bar-1
-//get- foo-1 fir foo-3 kaise ayaa???
-//ky hui bubu set foo-bar-1 then get foo-1 give bar then get foo-3 give bar
- 
- 
 ```
