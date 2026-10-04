@@ -1,7 +1,7 @@
 # generate parentheses/description
 
 **Platform:** LeetCode  
-**Date:** 2026-10-03  
+**Date:** 2026-10-04  
 
 ## Solution
 
